@@ -1,0 +1,31 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    
+
+
+    .icon {
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        &.previous{
+            background-image: url("../../../public/img/Previous.svg");
+            padding: 10px;
+            cursor: pointer;
+        }
+        &.ellipse{
+            background-image: url("../../../public/img/EllipseFilled.svg");
+            padding: 10px;
+        }
+        &.ellipse-filled{
+            background-image: url("../../../public/img/Ellipse.svg");
+            padding: 10px;
+        }
+        &.next{
+            background-image: url("../../../public/img/Next.svg");
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+    }
+}
