@@ -4,13 +4,96 @@
   display: flex;
   flex-direction: row;
   .content {
-    // background-color: yellow;
+    background-color: white;
     width: 50%;
-    height: 100%;
+    height: 100vh;
   }
   .info-area {
-    // background-color: yellowgreen;
+    background-color: black;
     width: 50%;
-    height: 100%;
+    height: 100vh;
   }
+  .h1{
+    display: flex;
+    text-align: center;
+    position: absolute;
+    width: 715px;
+    height: 130px;
+    left: 105px;
+    top: 130px;
+    color: red;
+    font-size: 30px;
+  }
+
+
+.headLine{
+  position:absolute;
+  width: 700px;
+  height: 90px;
+  top: 110px;
+  left: 1000px;
+  color: red;
+   
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
 }
+
+.text{
+  position: absolute;
+  width: 705px;
+  height: 606px;
+  left: 1000px;
+  top: 195px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 200%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.group1 input{
+  width:450px;
+  height: 55px;
+}
+
+.firstname{
+position: absolute;
+width: 455px;
+height: 54px;
+left: 235px;
+top: 390px;
+}
+
+.lastname{
+position: absolute;
+width: 455px;
+height: 54px;
+left: 235px;
+top: 480px;
+}
+.email{
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 570px;
+  }
+.phone{
+position: absolute;
+width: 455px;
+height: 54px;
+left: 235px;
+top: 660px;
+}
+
+
+}
+
+

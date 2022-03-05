@@ -1,0 +1,159 @@
+#redberrian-insights {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    .leftPanel {
+      background-color: white;
+      width: 50%;
+      height: 100%;
+      
+    }
+    .rightPanel {
+      background-color: black;
+      width: 50%;
+      height:100vh;
+    }
+
+    .title{
+        position: absolute;
+        width: 788px;
+        height: 175px;
+        left: 140px;
+        top: 43px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 79px;
+        display: flex;
+        align-items: center;
+        color: #FE3B1F;
+    }
+
+    .leftPanel p{
+        width: 645px;
+        height: 52px;
+        left: 153px;
+        top: 345px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+
+    }
+
+    .radioQuestion2{
+        position: absolute;
+        width: 645px;
+        height: 119px;
+        left: 153px;
+        top: 345px;
+    }
+
+    .yes, .no{
+
+        width: 197px;
+        height: 21px;
+        left: 182px;
+        top: 405px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+
+    }
+
+    .no{
+        padding-top: 20px;
+    }
+
+
+
+    .rectangle p{
+        position: absolute;
+        width: 645px;
+        height: 52px;
+        left: 153px;
+        top: 509px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+    }
+    .rectangle2 p{
+        position: absolute;
+        position: absolute;
+        width: 645px;
+        height: 52px;
+        left: 153px;
+        top: 727px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+    }
+
+    .textArea{
+        position: absolute;
+        width: 535px;
+        height: 122px;
+        left: 153px;
+        top: 572px;
+        padding-left: 20px;
+        padding-top: 10px;
+        background: #FFFFFF;
+        border: 1px solid #525557;
+        box-sizing: border-box;
+    }
+
+    .textArea2{
+        position: absolute;
+        width: 535px;
+        height: 89px;
+        left: 153px;
+        top: 790px;
+        padding-left: 20px;
+        padding-top: 10px;
+        background: #FFFFFF;
+        border: 1px solid #525557;
+        box-sizing: border-box;
+    }
+
+    .rightPanel .title{
+        left: 1023px;
+    }
+    .description{
+        position: absolute;
+        width: 705px;
+        height: 606px;
+        left: 1023px;
+        top: 287px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 200%;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+
+    }    
+ 
+    
+}

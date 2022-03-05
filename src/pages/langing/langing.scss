@@ -1,7 +1,74 @@
 #langing {
-  font-size: 30px;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   background-color: black;
   background-image: url("../../../public/img/stars.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
 }
+ h1{
+position: absolute;
+width: 1090px;
+height: 212px;
+left: 434px;
+top: 175px;
+
+font-family: Rowdies;
+font-style: normal;
+font-weight: normal;
+font-size: 96px;
+line-height: 119px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #FE3B1F;
+}
+ button{
+width: 395px;
+height: 80px;
+margin-top: 400px;
+margin-left: 660px;
+background-color: red;
+padding: 20px;
+border-radius: 50px;
+color: #FFFFFF;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+
+}
+
+.submittedApplication{
+  position: absolute;
+  width: 338px;
+  height: 66px;
+  left: 730px;
+  top: 500px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration-line: underline;
+  cursor: pointer;
+  color: #FFFFFF;
+
+}
+
+.rocketman{
+position: absolute;
+width: 400px;
+height: 400px;
+left: 600px;
+top: 500px;
+background: url("../../../public/img/rocketman\ .svg");
+
+}
+
+
+

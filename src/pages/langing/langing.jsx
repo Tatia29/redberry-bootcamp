@@ -9,8 +9,13 @@ export default function Langing(){
     }
 
     return <div id="langing">
+        
+        <h1>Welcome Rocketeer !</h1>
         <button onClick={navigateOnPersonalPage}>Start Questionnaire</button>
+        <div className="submittedApplication">Submitted  Applications</div>
+        <div  className="rocketman"></div>
         </div>
+        
 }
 
 

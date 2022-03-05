@@ -1,0 +1,156 @@
+#covid {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    .leftPanel {
+      background-color: white;
+      width: 50%;
+      height: 100%;
+      
+    }
+    .rightPanel {
+      background-color: black;
+      width: 50%;
+      height:100vh;
+    }
+
+    .navigation{
+        position: absolute;
+        width: 231px;
+        height: 19px;
+        left: 294px;
+        top: 1292px;
+            }
+
+
+    
+
+    .radioQuestion1, .radioQuestion2, .dateQuestion1,.radioQuestion3, .dateQuestion2{
+        position: absolute;
+        width: 645px;
+        height: 157px;
+        left: 166px;
+        top: 301px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .dateQuestion2{
+        position: absolute;
+        width: 645px;
+        height: 121px;
+        left: 166px;
+        top: 1029px;
+
+    }
+    .radioQuestion3{
+        width: 645px;
+        height: 119px;
+        left: 166px;
+        top: 867px;
+    }
+
+    .fromOffice, .fromHome, .hybrid,  .yes,.no {
+
+        width: 197px;
+        height: 21px;
+        left: 195px;
+        top: 361px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        
+            }
+    .leftPanel p{
+        width: 645px;
+        height: 52px;
+        left: 166px;
+        top: 301px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+    }
+
+    .radioQuestion2 {
+        width: 645px;
+        height: 119px;
+        left: 166px;
+        top: 509px;
+    }
+
+    .dateQuestion1{
+        width: 645px;
+        height: 119px;
+        left: 166px;
+        top: 671px;
+
+    }
+    .dateQuestion1 input, .dateQuestion2 input{
+        width: 455px;
+        height: 54px;
+        left: 166px;
+        top: 736px;
+
+    }
+    .when ::placeholder{
+        width: 195px;
+        height: 24px;
+        left: 223px;
+        top: 753px;
+        font-style: italic;
+        padding-left: 50px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        color: #454545;
+    }
+
+    .title{
+        position: absolute;
+        width: 788px;
+        height: 175px;
+        left: 1066px;
+        top: 61px;
+        color: #FE3B1F;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 79px;
+        display: flex;
+        align-items: center;
+
+    }
+    .leftPanel .title {
+        left: 51px;
+        padding-left: 100px;
+    }
+
+    .description{
+        position: absolute;
+        width: 705px;
+        height: 606px;
+        left: 1074px;
+        top: 251px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 200%;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+
+    }
+        }
