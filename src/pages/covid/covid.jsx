@@ -1,33 +1,69 @@
 import "./covid.scss";
 import Navigation from "../../components/navigation/navigation";
+import {useRecoilState} from "recoil";
+import {workingfrompreference,contactwithcovid19,hadcovid,isvaccinated, vaccinatedat} from "../../state/atoms";
 export default function Covid(){
+    const [workingPlacePreference, setWorkingPlacePreference] = useRecoilState(workingfrompreference)
+    const [contactWithCovid19, setContactWithCovid19] = useRecoilState(contactwithcovid19)
+    const [hadCovid, setHadCovid] = useRecoilState(hadcovid)
+    const [isVaccinated, setIsVaccinated] = useRecoilState(isvaccinated)
+    const [vaccinatedAt, setVaccinatedAt] = useRecoilState(vaccinatedat)
+    
+   
+    console.log("workingPlacePreference", workingPlacePreference); 
+    console.log("contactWithCovid19", contactWithCovid19);
+    console.log("hadcovid", hadCovid);
+    console.log("vaccinated", isVaccinated);
+    console.log("vaccinatedat", vaccinatedAt);
     return <div id="covid">
+        
         <Navigation prevPage="technical-skillset" nextPage="redberrian-insights"/>
         <div className="leftPanel">
             <div className="title">Covid Stuff</div>
             <div className="radioQuestion1">
             <p>How would you prefer to Work?</p>
-            <div className="fromOffice"><input type="radio" value="FromOffice" name="radio" /> From Sairme Office</div>
-            <div className="fromHome"><input type="radio" value="FromHome" name="radio" /> From Home</div>
-            <div className="hybrid"><input type="radio" value="hybrid" name="radio" /> hybrid</div>
+            <div className="fromOffice">
+                <input type="radio" value="from_office" name="radio" onChange={(e)=>
+                        {setWorkingPlacePreference(e.target.value)
+                        }}/> From Sairme Office</div>
+            <div className="fromHome"><input type="radio" value="from_home" name="radio" onChange={(e)=>
+                        {setWorkingPlacePreference(e.target.value)
+                        }}/> From Home</div>
+            <div className="hybrid"><input type="radio" value="hybrid" name="radio" onChange={(e)=>
+                        {setWorkingPlacePreference(e.target.value)
+                        }} /> hybrid</div>
             </div>
             <div className="radioQuestion2">
             <p>Did You Contact Covid-19?</p>
-            <div className="yes"><input type="radio" value="yes" name="radio" /> Yes</div>
-            <div className="no"><input type="radio" value="no" name="radio" /> No</div>
+            <div className="yes">
+                <input type="radio" value={true} name="radio" onChange={(e)=>{
+                            setContactWithCovid19(e.target.value)
+                        }} /> yes</div>
+            <div className="no"><input type="radio" value={false} name="radio" onChange={(e)=>
+                        {setContactWithCovid19(e.target.value)
+                        }}/> No</div>
             </div>
             <div className="dateQuestion1">
                 <p>When?</p>
-                <div className="when"><form><input type="{text}" placeholder="Date"></input></form></div>
+                <div className="when"><form><input type="{text}" placeholder="Date" onChange={(e)=>
+                        {setHadCovid(e.target.value)
+                        }}></input></form></div>
             </div>
             <div className="radioQuestion3">
             <p>Have You Been Vaccinated?</p>
-            <div className="yes"><input type="radio" value="yes" name="radio" /> Yes</div>
-            <div className="no"><input type="radio" value="no" name="radio" /> No</div>
+            <div className="yes"><input type="radio" value={true} name="radio" onChange={(e)=>
+                        {setIsVaccinated(e.target.value)
+                        }} /> Yes</div>
+            <div className="no"><input type="radio" value={false} name="radio" onChange={(e)=>
+                        {setIsVaccinated(e.target.value)
+                        }} /> No</div>
             </div>
             <div className="dateQuestion2">
                 <p>When did you get your last covid vaccine?</p>
-                <div className="when"><form><input type="{text}" placeholder="Date"></input></form></div>
+                <div className="when"><form><input type="{text}" placeholder="Date" onChange={(e)=>
+                        {setVaccinatedAt(e.target.value)
+                        }}
+                        ></input></form></div>
             </div>
             
         </div>

@@ -1,25 +1,49 @@
-import Navigation from "../../components/navigation/navigation";
+import "./result-page.scss";
 import { useEffect, useState } from "react";
 import {getAllApplications} from "../../services/services";
+import ExpandableItem from "../../components/expandable-item/expandable-item";
+import {
+    useRecoilState,
+  } from 'recoil';
+
 
 export default function ResultPage(){
     const [allApplications, setAllApplications] = useState([]);
+    
     useEffect(()=>{
+        console.log("all applications 0", allApplications);
         const getApplicationList = async() => {
             const response =  await getAllApplications();
+            console.log("response", response);
             setAllApplications(response)
         }
         getApplicationList();
     },[]);
+
+    console.log("allApplications 1", allApplications);
     
-    return <div>
+    return <div className="resultPage" >
        Result Page
-       <Navigation name="tamuna"/>
-       <div style={{display: "flex", flexDirection: "column"}}>
-        {allApplications.map((option)=>{
-            return <span>{option.first_name}</span>
+        {allApplications.map((item, index)=>{
+            console.log("item", item);
+            return <ExpandableItem 
+                    first_name={item.first_name} 
+                    last_name={item.last_name } 
+                    email={item.email} 
+                    phoneNumber={item.phone}
+                    isVaccinated={item.vaccinated}
+                    index={index} 
+                    vaccinatedAt = {item.vaccinated_at}
+                    workPreference = {item.work_preference}
+                    hadCovid = {item.had_covid}
+                    hadCovidAt ={item.had_covid_at}
+                    vaccinated_at={item.vaccinated_at}
+                    willOrganizeDevtalk={item.will_organize_devtalk}
+                    devtalkTopic={item.devtalk_topic}
+                    somethingSpecial={item.something_special}
+                    key={index}/>
         })}
-        </div>
+        {/* </div> */}
         </div>
 }
 

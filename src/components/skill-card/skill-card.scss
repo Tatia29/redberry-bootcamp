@@ -1,0 +1,15 @@
+.skillCard{
+    width: 70%;
+    height: 40px;
+    background-color: olive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    background-image: url("../../../public/img/remove.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}

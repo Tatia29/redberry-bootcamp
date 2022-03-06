@@ -1,22 +1,39 @@
 import "./personal-information.scss";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
+import {useRecoilState} from "recoil";
+import {email, firstname, lastname, phonenumber} from "../../state/atoms";
 
 
 
 export default function PersonalInfromation(){
     const navigate = useNavigate();
+    const [firstName, setFirstName] = useRecoilState(firstname)
+    const [lastName, setLastName] = useRecoilState(lastname)
+    const [phone, setPhone] = useRecoilState(phonenumber)
+    const [mail, setMail] = useRecoilState(email)
 
+    console.log("mai;",mail)
     return <div id="personal-information">
         <div className="content">
             <div className="h1"><h1>Hey, Rocketeer, what are your coordinates?</h1></div>
             <div className="group1">
-                <div className="firstname"><form><input type="{text}" placeholder="First Name" ></input></form></div>
-                <div className="lastname"><form><input type="{text}" placeholder="Last Name"></input></form></div>
-                <div className="email"><form><input type="{text}" placeholder="E-mail"></input></form></div>
-                <div className="phone"><form><input type="{text}" placeholder="+995 5.."></input></form></div>
-                
-                
+                <div className="firstname">
+                    <form>
+                        <input type="{text}" placeholder="First Name" 
+                        onChange={(e)=>{setFirstName(e.target.value)}}></input>
+                        <input type="{text}" placeholder="Last Name" onChange={(e)=>
+                        {setLastName(e.target.value)
+                        }}></input>
+                        <input type="{text}" placeholder="E-mail" onChange={(e)=>
+                        {setMail(e.target.value)
+                        }}></input>
+                        <input type="number" placeholder="+995 5.." onChange={(e)=>
+                        {setPhone(parseInt(e.target.value))
+                        }}></input>
+                    </form>
+                </div>
+                <button onClick={()=>{console.log("omaga=", firstName, lastName, phone, mail)}}>click me</button>
                 <div>
                     <Navigation prevPage="" nextPage="technical-skillset"   />
                 </div>
