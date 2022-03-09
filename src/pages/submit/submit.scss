@@ -2,45 +2,31 @@
     width: 100%;
     height: 100vh;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    .submitButton  {
-        position: absolute;
-        width: 395px;
-        height: 79px;
-        left: 700px;
-        top: 458px;
-        background: #FE3B1F;
-        border-radius: 50px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 36px;
-        line-height: 44px;
-       
-        cursor: pointer;
-        color: #FFFFFF;
 
-    }
+.submitButton{
+    align-items: center; 
+    width: 20%;
+    background-color: red;
+    border-radius: 20px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Montserrat;
+    cursor: pointer;
 
-    .goBack{
-        position: absolute;
-        width: 190px;
-        height: 50px;
-        left: 850px;
-        top: 572px;
-        cursor: pointer;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 28px;
-        line-height: 34px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-decoration-line: underline;
-        color: #FFFFFF;
+}
 
-      
-      }
+.goBack{
+    color: white;
+    margin-top: 30px;
+    text-decoration-line: underline;
+    cursor: pointer;
+
+}
 
 }

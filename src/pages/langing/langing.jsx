@@ -7,12 +7,16 @@ export default function Langing(){
        navigate("/personal-information")
        
     }
+    function navigateOnResultPage() {
+        navigate("/result-page")
+        
+     }
 
     return <div id="langing">
         
         <h1>Welcome Rocketeer !</h1>
         <button onClick={navigateOnPersonalPage} className="langingButton">Start Questionnaire</button>
-        <div className="submittedApplication">Submitted  Applications</div>
+        <div className="submittedApplication" onClick={navigateOnResultPage}>Submitted  Applications</div>
         <div className="rocketman"></div>
         </div>
         

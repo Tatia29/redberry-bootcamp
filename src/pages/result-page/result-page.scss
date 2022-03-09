@@ -1,7 +1,17 @@
 .resultPage{
     display: flex;
+    background-color: black;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+
+
+   p{
+       font-family: Montserrat;
+       color: white;
+       font-size: 35px;
+
+
+   } 
 }

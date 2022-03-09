@@ -13,9 +13,10 @@ export default function RedberrianInsights(){
     console.log("devtalktopic",devTalkTopic)
     console.log("somethingSpecial",somethingSpecial)
     return <div id="redberrian-insights">
-        <Navigation prevPage="covid" nextPage="submit"/>
+       
         <div className="leftPanel">
             <div className="title">What About You?</div>
+            <div className="insightform">
             <div className="radioQuestion2">
             <p>Would you attend Devtalks and maybe also organize your own?</p>
             <div className="yes"><input type="radio" value={true} name="radio" onChange={(e)=>
@@ -33,11 +34,16 @@ export default function RedberrianInsights(){
             </div>
             <div className="rectangle2">
                 <p>What would you speak about at Devtalk?</p>
-                <textarea className="textArea2" rows="4" placeholder="I ..."  onChange={(e)=>
+                <textarea className="textArea" rows="4" placeholder="I ..."  onChange={(e)=>
                         {setSomethingSpecial(e.target.value)
                         }}></textarea>
+                        <div className="navigation"><Navigation prevPage="covid" nextPage="submit"/></div> 
+            </div>
+           
+                
             </div>
         </div>
+        
         <div className="rightPanel">
             <div className="title">Redberry Covid Policies</div>
             <div className="description">

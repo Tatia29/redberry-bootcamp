@@ -20,12 +20,11 @@ export default function ResultPage(){
         getApplicationList();
     },[]);
 
-    console.log("allApplications 1", allApplications);
     
     return <div className="resultPage" >
-       Result Page
+        <p>Submitted applications</p>
+
         {allApplications.map((item, index)=>{
-            console.log("item", item);
             return <ExpandableItem 
                     first_name={item.first_name} 
                     last_name={item.last_name } 
@@ -41,6 +40,8 @@ export default function ResultPage(){
                     willOrganizeDevtalk={item.will_organize_devtalk}
                     devtalkTopic={item.devtalk_topic}
                     somethingSpecial={item.something_special}
+                    skills={item.skills}
+                   // durations={item.duration}
                     key={index}/>
         })}
         {/* </div> */}

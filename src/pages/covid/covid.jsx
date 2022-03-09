@@ -10,36 +10,32 @@ export default function Covid(){
     const [vaccinatedAt, setVaccinatedAt] = useRecoilState(vaccinatedat)
     
    
-    console.log("workingPlacePreference", workingPlacePreference); 
-    console.log("contactWithCovid19", contactWithCovid19);
-    console.log("hadcovid", hadCovid);
-    console.log("vaccinated", isVaccinated);
-    console.log("vaccinatedat", vaccinatedAt);
+
     return <div id="covid">
-        
-        <Navigation prevPage="technical-skillset" nextPage="redberrian-insights"/>
         <div className="leftPanel">
             <div className="title">Covid Stuff</div>
+            <div className="covidform">
             <div className="radioQuestion1">
             <p>How would you prefer to Work?</p>
             <div className="fromOffice">
-                <input type="radio" value="from_office" name="radio" onChange={(e)=>
+                <input type="radio" value="from_office" name="workplace" onChange={(e)=>
                         {setWorkingPlacePreference(e.target.value)
                         }}/> From Sairme Office</div>
-            <div className="fromHome"><input type="radio" value="from_home" name="radio" onChange={(e)=>
+            <div className="fromHome"><input type="radio" value="from_home" name="workplace" onChange={(e)=>
                         {setWorkingPlacePreference(e.target.value)
                         }}/> From Home</div>
-            <div className="hybrid"><input type="radio" value="hybrid" name="radio" onChange={(e)=>
+            <div className="hybrid">
+                <input type="radio" value="hybrid" name="workplace" onChange={(e)=>
                         {setWorkingPlacePreference(e.target.value)
                         }} /> hybrid</div>
             </div>
             <div className="radioQuestion2">
             <p>Did You Contact Covid-19?</p>
             <div className="yes">
-                <input type="radio" value={true} name="radio" onChange={(e)=>{
+                <input type="radio" value={true} name="covid19" onChange={(e)=>{
                             setContactWithCovid19(e.target.value)
                         }} /> yes</div>
-            <div className="no"><input type="radio" value={false} name="radio" onChange={(e)=>
+            <div className="no"><input type="radio" value={false} name="covid19" onChange={(e)=>
                         {setContactWithCovid19(e.target.value)
                         }}/> No</div>
             </div>
@@ -51,10 +47,10 @@ export default function Covid(){
             </div>
             <div className="radioQuestion3">
             <p>Have You Been Vaccinated?</p>
-            <div className="yes"><input type="radio" value={true} name="radio" onChange={(e)=>
+            <div className="yes"><input type="radio" value={true} name="vaccinated" onChange={(e)=>
                         {setIsVaccinated(e.target.value)
                         }} /> Yes</div>
-            <div className="no"><input type="radio" value={false} name="radio" onChange={(e)=>
+            <div className="no"><input type="radio" value={false} name="vaccinated" onChange={(e)=>
                         {setIsVaccinated(e.target.value)
                         }} /> No</div>
             </div>
@@ -64,6 +60,10 @@ export default function Covid(){
                         {setVaccinatedAt(e.target.value)
                         }}
                         ></input></form></div>
+            </div>
+            
+
+<Navigation prevPage="technical-skillset" nextPage="redberrian-insights"/>
             </div>
             
         </div>

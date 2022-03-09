@@ -62,3 +62,13 @@ export const technicalskills = atom({
   key:"technicalskills",
   default:[]
 })
+
+export const skills = atom({
+  key:"skills",
+  default:[]
+})
+
+export const duration = atom({
+  key:"skills",
+  default:[]
+})

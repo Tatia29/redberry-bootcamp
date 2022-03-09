@@ -1,10 +1,10 @@
 .skillCard{
     width: 70%;
     height: 40px;
-    background-color: olive;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid black;
 }
 .icon{
     width: 40px;

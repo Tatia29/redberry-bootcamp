@@ -5,7 +5,7 @@ import "./expandable-item.scss";
 export default function ExpandableItem(props){
 
 const [isOpen, setIsOpen] = useState(false);
-
+// console.log("SKILLS",props.skills);
 
 
 function handleButtonClick(){
@@ -26,7 +26,14 @@ function getIconClassName(){
 
     }
 }
-console.log("props", props);
+
+function getYesOrNo(booleanValue){
+    if(booleanValue===true){
+        return "Yes";
+    }
+    return "No";
+}
+// console.log("props", props);
 
 
 return <>
@@ -46,22 +53,32 @@ return <>
             
             <div className="covid">
                 <p>Covid</p>
-            <div className="covid">isVaccinated: {props.isVaccinated}</div>
+            <div className="covid">isVaccinated: {getYesOrNo(props.isVaccinated)}</div>
             <div className="covid">vaccinated_at: {props.vaccinatedAt}</div>
             <div className="covid">work_preference: {props.workPreference}</div>
-            <div className="covid">had_covid: {props.hadCovid}</div>
+            <div className="covid">had_covid: {getYesOrNo(props.hadCovid)}</div>
             <div className="covid">had_covid_at: {props.hadCovidAt}</div>
             <div className="covid">vaccinatedAt: {props.vaccinated_at}</div>
             </div>
-            <div className="insights">
+        
+        </div>
+        <div className="skills-insight">
+        <div className="insights">
                 <p>Insights</p>
-            <div className="insights">willOrganizeDevtalk: {props.willOrganizeDevtalk}</div>
+            <div className="insights">willOrganizeDevtalk: {getYesOrNo(props.willOrganizeDevtalk)}</div>
             <div className="insights">devtalkTopic: {props.devtalkTopic}</div>
             <div className="insights">something_special: {props.somethingSpecial}</div>
             </div>
-            
-
-
+        <div className="skills">
+               <p>skills</p>
+               {props.skills.map((skill)=>{
+                   console.log("skill", skill);
+                   return <div className="skillsContent"><div className="insights">Skill ID:{skill.id} </div>
+                   <div className="insights">Years of experience: {skill.experience}</div>
+                   </div>
+               })}
+               
+        </div>
         </div>
         </div>
     </>

@@ -7,7 +7,6 @@ export default function Navigation(props){
     const navigate = useNavigate();
     const location = useLocation();
     function nextPage(){
-        console.log("props.nextPage",props.nextPage);
         navigate("/" +props.nextPage);
     }
 

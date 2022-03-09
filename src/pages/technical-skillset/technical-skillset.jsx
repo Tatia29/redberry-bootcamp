@@ -7,10 +7,12 @@ import {useRecoilState} from "recoil";
 import SkillCard from "../../components/skill-card/skill-card";
 
 export default function TechnicalSkillSet(){
+    
     const [selectOptions, setSelectOptions] = useState([]);
     const [selectedSkills, setSelectedSkills] = useState("");
     const [selectedSkillExprience, setSelectedSkillExperience] = useState(0);
     const [skills, setSkills] = useRecoilState(technicalskills);
+
     console.log("skills", skills);
 
     useEffect(()=>{
@@ -23,25 +25,25 @@ export default function TechnicalSkillSet(){
         getSkills();
     },[]);
 
+   
+
     function addSkill(){
+        if(selectedSkills !== "" && selectedSkillExprience !== 0){
         let changeSkills = [...skills];
-        console.log("changed skills", changeSkills)
         changeSkills.push({
             id: selectedSkills,
             experience: selectedSkillExprience
         })
         setSkills(changeSkills)
+        }
     }
     
     return <div id="technical-skillset">
         <div className="leftPanel">
-            <div className="title">Tell us about your skills</div>
-            
-            {/* <SkillCard id={1} experience={2} /> */}
-            
+            <div className="title"><p>Tell us about your skills</p></div>
             <div className="experienceForm">
             <div className="skills">
-                <select name="skills" id="skills" onChange={(e)=>{
+                <select name="skills" className="skill" id="skills" onChange={(e)=>{
                             setSelectedSkills(parseInt(e.target.value));
                         }}>
                 {selectOptions.map((item)=>{
@@ -51,19 +53,25 @@ export default function TechnicalSkillSet(){
                 })}
                 </select>
             </div>
-                <input type="number" className="duration" onChange={(e)=>{
+                <input type="number" className="duration" placeholder="Experience Duration in Years" onChange={(e)=>{
                     setSelectedSkillExperience(parseInt(e.target.value))
                 }}>
                 </input>
             </div>
-            <button onClick={addSkill}>Add Skill</button>
-            {skills.map((skill)=>{
-                return <SkillCard id={skill.id} experience={skill.experience} key={skill.id}/>
+           <div className="button"> <button onClick={addSkill}>Add Skill</button></div>
+
+           <div className="card">
+           {skills.map((skill)=>{
+                
+                return <SkillCard id={skill.id} className="skillcard" experience={skill.experience} key={skill.id}/>
             })}
+           </div>
+            
+            <Navigation prevPage="personal-information" nextPage="covid"/>
         </div>
-        <Navigation prevPage="personal-information" nextPage="covid"/>
+        
         <div className="rightPanel">
-            <div className="title2">A bit about our battles</div>
+            <div className="title">A bit about our battles</div>
             <div className="description">As we said, Redberry has been on the field for quite some time now,
              and we have touched and embraced a variety of programming languages, 
              technologies, philosophies, and frameworks. We are battle-tested in PHP Laravel Stack with Vue.js,

@@ -5,22 +5,10 @@
 }
 
 .thank{
-    position: absolute;
-    width: 1066px;
-    height: 191px;
-    left: 427px;
-    top: 444px;
-    
-    font-family: Rowdies;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 96px;
-    line-height: 119px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    
-    /* Redberry Red */
-    
+    font-size: 70px;
+    height: 100vh;
     color: #FE3B1F;
 }
